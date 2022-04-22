@@ -1,12 +1,14 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+@import './utilits/mixin';
+@import './utilits/resets';
+@import './utilits/veriables';
 
-// Стили для файла с примером HTML-фрагмента
 @import './components/header';
 @import './components/hero';
-@import './components/example';
+@import './components/menu';
+@import './components/product';
 @import './components/about';
-@import './components/prices';
+@import './components/advatages';
+@import './components/gallery';
+@import './components/custom-reviews';
+@import './components/contacts';
 @import './components/footer';
