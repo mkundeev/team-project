@@ -1,0 +1,46 @@
+.hero {
+    position: relative;
+
+    background-color: var(--hero-bg-color);
+    padding-bottom: 160px;
+    padding-top: 193px;
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    .title{
+        width: 218px;
+        margin-bottom: 19px;
+
+        span{
+        @include font(26px, 400, 1.15, 0.04em);
+        color: var(--main-white);
+        display: inline-block;
+        }
+    }
+    .button-wrap{
+        display: flex;
+        .btn + .btn{
+            margin-left: 20px;
+        }
+    }
+    .hero-circle{
+        position: absolute;
+        left: 36px;
+        bottom: 75px;
+
+        border-radius: 50%;
+        width: 346px;
+        height: 344px;
+        
+
+        background-color: var(--secondary-pink-color);
+    }
+    .hero-icecream{
+        position: absolute;
+        bottom: 0;
+        left: 117px;
+        z-index: 1;
+    }
+
+}
