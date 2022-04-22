@@ -5,6 +5,7 @@
     border-radius: 20px;
     border: none;
     height: 24px;
+    @include flex(flex, center, center);
     padding-left: 15px;
     padding-right: 15px;
     &:hover, &:focus{
