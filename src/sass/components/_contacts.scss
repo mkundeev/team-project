@@ -16,7 +16,7 @@
     margin: 0 auto;
     @include font(12px, 500, 1.5, null);
     background-color: var(--secondary-bg-color);
-    background-image: linear-gradient(to bottom, var(--main-white) 12%,var(--secondary-bg-color)12%);
+    background-image: linear-gradient(to bottom, var(--main-white) 12%,var(--secondary-bg-color) 12%);
     &__item-when {
         li:nth-child(2n) {
             margin-bottom: 10px;

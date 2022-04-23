@@ -19,11 +19,17 @@
     padding-top: 60px;
 
     background-color: var(--menu-bg-color);
+    @include tablet{
+        width: 254px;
+    }
 }
 .btn-menu-close{
     position: absolute;
     top: 10px;
     right: 15px;
+    @include tablet {
+        right: 21px;
+    }
 }
 
 .menu-arrow-icon{
@@ -45,6 +51,9 @@
         border-top: 1px solid #E18298;
         border-bottom: 1px solid #E18298;
         @include flex(flex,center,flex-start);
+        @include tablet{
+            padding-right: 34px;
+        }
     }
     &__link{
         @include font(14px, 700, 1.29, null);
