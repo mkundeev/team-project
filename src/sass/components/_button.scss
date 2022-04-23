@@ -1,0 +1,23 @@
+.btn{
+    @include font(8px, 400, 1.25, null);
+    background-color: var(--main-white);
+    color: var(--primery-pink-color);
+    border-radius: 20px;
+    border: none;
+    height: 24px;
+    @include flex(flex, center, center);
+    padding-left: 15px;
+    padding-right: 15px;
+    &:hover, &:focus{
+        background-color: var(--button-hover-grey-color);
+    }
+}
+.btn--pink {
+    background-color: var(--primery-pink-color);
+    color: var(--main-white);
+
+    &:hover,
+    &:focus {
+        background-color: var(--button-hover-pink-color);
+    }
+}
