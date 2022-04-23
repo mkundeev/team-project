@@ -38,16 +38,13 @@
   }
 }
 
-.grow img {
-  position: relative;
+.gallery-wrap__list img {
   transition: transform 350ms linear;
-}
 
-.grow {
-  & img:hover {
+  &:hover {
     position: relative;
     z-index: 3;
-    transform: translateX(10px) scale(1.3);
+    transform: translateX(5px) scale(1.3);
   }
 }
 
