@@ -1,0 +1,130 @@
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+  .container {
+    text-align: center;
+  }
+  &__text {
+    @include font(18px, null, 1.16, null);
+    color: $second-text-color;
+    margin-bottom: $margin-bottom;
+  }
+  &__title {
+    @include font(34px, 400, 1.14, 0.04em);
+    color: $first-text-color;
+    margin-bottom: 144px;
+  }
+  &-list {
+    margin-bottom: -30px;
+  }
+
+  &-list__item {
+    position: relative;
+    width: 280px;
+    min-height: 485px;
+    border-radius: 24px;
+    margin-bottom: 130px;
+    padding: 161px 40px 41px 40px;
+
+    &.cream {
+      background-color: $ice-cream-bg-color;
+    }
+    &.coffee {
+      background-color: $ice-coffee-bg-color;
+    }
+    &.milkshakes {
+      background-color: $milkshakes-bg-color;
+      margin-bottom: 0;
+    }
+  }
+  &-list__title {
+    @include font(20px, 400, 1.15, 0.04em);
+    color: $primary-text-color;
+    .cream &::before {
+      content: url(../images/ice_cream-mob-1x.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .cream &::before {
+          content: url(../images/ice_cream-mob-2x.png);
+        }
+      }
+    }
+    .coffee &::before {
+      content: url(../images/ice_coffee-mob-1x.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .coffee &::before {
+          content: url(../images/ice_coffee-mob-2x.png);
+        }
+      }
+    }
+
+    .milkshakes &::before {
+      content: url(../images/milkshakes-mob-1x.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .milkshakes &::before {
+          content: url(../images/milkshakes-mob-2x.png);
+        }
+      }
+    }
+
+    .cream &::before,
+    .coffee &::before,
+    .milkshakes &::before {
+      position: absolute;
+      left: 16px;
+      bottom: 346px;
+    }
+
+    .cream &::after,
+    .coffee &::after,
+    .milkshakes &::after {
+      position: absolute;
+      content: '...';
+      left: 130px;
+      bottom: 260px;
+      font-size: 20px;
+    }
+  }
+  &-list__text {
+    @include font(14px, 700, 1.5, 0.04em);
+    color: $primary-text-color;
+    margin-top: 66px;
+  }
+
+  &-list__btn {
+    position: relative;
+    border: none;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+    background-color: $button-first-text-color;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border: 1px solid $first-text-color;
+      background-color: #d41443;
+      width: 11px;
+      top: 51%;
+      left: 36%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-top: 3px solid #d41443;
+      border-left: 3px solid #d41443;
+      transform: rotate(135deg);
+      top: 41%;
+      left: 42%;
+    }
+
+    // &:hover::before,
+    // &:hover::after{
+    //   translate:transform rotate(360deg);
+    // }
+  }
+}
