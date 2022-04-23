@@ -11,18 +11,83 @@
     margin: -1px;
 }
 .contacts {
-    padding-top: 129px;
+    padding-top: 86px;
     padding-bottom: 113px;
     margin: 0 auto;
     @include font(12px, 500, 1.5, null);
     background-color: var(--secondary-bg-color);
-    background-image: linear-gradient(to bottom, var(--main-white) 12%,var(--secondary-bg-color) 12%);
+    background-image: linear-gradient(to bottom, 
+    var(--main-white) 9%,var(--secondary-bg-color) 9%);
+
+    // ___________768px______________
+    @include tablet {
+        padding-top: 119px;
+        padding-bottom: 158px;
+        background-image: linear-gradient(to bottom,
+        var(--main-white) 22%, var(--secondary-bg-color) 22%);
+    }
+    // __________1280________________
+    @include desktop {
+        @include font(16px, 500, 1.86, 0.04em);
+        padding-top: 132px;
+        padding-bottom: 165px;
+    }
     &__list {
         width: 100%;
-        max-width: 380px;
+        width: 220px;
         font-weight: 500;
         margin: 0 auto 54px;
+        @include tablet {
+            @include flex(flex, center, center);
+            width: 100%;
+            margin: 0 auto 81px;
+        }
+        @include desktop {
+            margin: 0 auto 86px;
+        }
     }
+    &__item {
+        max-width: 100%;
+        padding: 43px 20px;
+        margin-bottom: 20px;
+        background-color: var(--main-white);
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+    
+        &--black {
+            color: var(--main-black);
+        }
+    
+        &--grey {
+            line-height: 1.5;
+            color: var(--main-text-color);
+        }
+    
+        &--pink {
+            color: var(--secondary-pink-color);
+        }
+    
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__item:nth-child(2) {
+        margin-left: 0;
+        margin-right: 0;
+    
+        @include tablet {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    
+        @include desktop {
+            margin-left: 31px;
+            margin-right: 31px;
+        }
+    
+    }
+    
     &__item-title {
         display: inline-flex;
         margin-bottom: 25px;
@@ -37,34 +102,36 @@
         &.green {
             background-color: var(--green-color);
         }
+        @include tablet {
+            margin-bottom: 30px;
+        }
+        @include desktop {
+            margin-bottom: 32px;
+        }
     }
     &__item-when {
         li:nth-child(2n) {
             margin-bottom: 10px;
+            @include tablet {
+                margin-bottom: 16px;
+            }
+            @include desktop {
+                margin-bottom: 15px;
+            }
         }
         @include font(12px, 500, 1.86, null);
         padding-bottom: 25px;
     }
-    &__item {
-        max-width: 100%;
-        padding: 43px 20px;
-        background-color: var(--main-white);
-        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-        border-radius: 24px;
-        &--black {
-            color: var(--main-black);
-        }
-        &--grey {
-            line-height: 1.5;
-            color: var(--main-text-color);
-        }       
-        &--pink {
-        color: var(--secondary-pink-color);
-        }
-    }
+    
     &__link {
         &--grey {
             color: var(--main-text-color);
+        }
+    }
+    &__button-list {
+        @include tablet {
+            @include flex(flex, center, center);
+            width: 100%;
         }
     }
     &__button-item {
@@ -73,9 +140,22 @@
     }
     &__button-item:first-child {
         margin-bottom: 10px;
+        @include tablet {
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+        @include desktop {
+            margin-right: 15px;
+        }
     }
     &__item-where &__item--black:first-child {
         margin-bottom: 10px;
+        @include tablet {
+            margin-bottom: 14px;
+        }
+        @include desktop {
+            margin-bottom: 10px;
+        }
     }
 }
 // _________Полоса__________
@@ -87,9 +167,24 @@
     margin: 25px 0;
     content: '';
     border: 1px solid #E1E1E1;
+    @include tablet {
+        margin: 30px 0;
+    }
+    @include desktop {
+        margin: 32px 0;
+    }
 }
 .contacts__button {
     width: 162px;
     height: 44px;
     @include font(16px, 700, 1.31, null);
+    @include tablet{
+        width: 192px;
+        height: 44px;
+    }
+    @include desktop {
+        width: 198px;
+        height: 44px;
+    }
+
 }
