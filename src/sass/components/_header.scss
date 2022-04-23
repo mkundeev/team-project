@@ -14,6 +14,7 @@
         color: var(--primery-pink-color);
         @include font(26px, 400, 1.15, 0.04em);
         text-transform: uppercase;
+        font-family: 'Titan One', cursive;
     }
 }
 .btn-close__icon{
