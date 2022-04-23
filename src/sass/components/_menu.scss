@@ -16,8 +16,6 @@
     right: 0;
     width: 250px;
     height: 100vh;
-    padding-left: 21px;
-    padding-right: 20px;
     padding-top: 60px;
 
     background-color: var(--menu-bg-color);
@@ -33,17 +31,25 @@
 }
 
 .btn-menu-modal{
-    width: 100%;
-    margin-bottom: 32px;
+    width: 209px;
+    margin-bottom: 19px;
+    margin-left: 21px;
 }
 
 .nav-list{
-    &__item:not(:last-child){
-        margin-bottom: 23px;
+    &__item{
+        display: block;
+        height: 42px;
+        padding-left: 21px;
+        padding-right: 20px;
+        border-top: 1px solid #E18298;
+        border-bottom: 1px solid #E18298;
+        @include flex(flex,center,flex-start);
     }
     &__link{
         @include font(14px, 700, 1.29, null);
         color: var(--main-white);
+        
         &:hover{
             color: var(--primery-pink-color);
         }
