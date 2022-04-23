@@ -42,13 +42,28 @@
     color: $primary-text-color;
     .cream &::before {
       content: url(../images/ice_cream-mob-1x.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .cream &::before {
+          content: url(../images/ice_cream-mob-2x.png);
+        }
+      }
     }
     .coffee &::before {
       content: url(../images/ice_coffee-mob-1x.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .coffee &::before {
+          content: url(../images/ice_coffee-mob-2x.png);
+        }
+      }
     }
 
     .milkshakes &::before {
       content: url(../images/milkshakes-mob-1x.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .milkshakes &::before {
+          content: url(../images/milkshakes-mob-2x.png);
+        }
+      }
     }
 
     .cream &::before,
@@ -106,7 +121,7 @@
       top: 41%;
       left: 42%;
     }
-    
+
     // &:hover::before,
     // &:hover::after{
     //   translate:transform rotate(360deg);
