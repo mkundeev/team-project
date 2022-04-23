@@ -50,7 +50,7 @@
         @include font(14px, 700, 1.29, null);
         color: var(--main-white);
         
-        &:hover{
+        &:hover, &:focus{
             color: var(--primery-pink-color);
         }
     }
