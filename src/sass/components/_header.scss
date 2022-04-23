@@ -1,0 +1,22 @@
+.header .container{
+        padding-top: 6px;
+        @include flex(flex, center, space-between);
+}
+
+.logo{
+    @include flex(flex, center, flex-start);
+    &-icon {
+        fill: var(--primery-pink-color);
+        margin-right: 20px;
+    }
+    
+    &-name {
+        color: var(--primery-pink-color);
+        @include font(26px, 400, 1.15, 0.04em);
+        text-transform: uppercase;
+        font-family: 'Titan One', cursive;
+    }
+}
+.btn-close__icon{
+    fill: var(--primery-pink-color);
+}
