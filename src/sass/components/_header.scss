@@ -1,8 +1,14 @@
-.header .container{
+.header{
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 3;
+    .container{
+        
         padding-top: 6px;
         @include flex(flex, center, space-between);
+    }
 }
-
 .logo{
     @include flex(flex, center, flex-start);
     &-icon {

@@ -1,9 +1,12 @@
 .hero {
-    position: relative;
+    
 
     background-color: var(--hero-bg-color);
     padding-bottom: 160px;
     padding-top: 193px;
+    .container{
+    position: relative;
+    }
     .hero-content {
         position: relative;
         z-index: 2;
@@ -23,11 +26,16 @@
         .btn + .btn{
             margin-left: 8px;
         }
+        .btn{
+            height: 24px;
+            @include font(8px, 400, 1.25, null);
+            border-right: 20px;
+        }
     }
     .hero-circle{
         position: absolute;
         left: 36px;
-        bottom: 75px;
+        bottom: -85px;
 
         border-radius: 50%;
         width: 346px;
@@ -38,7 +46,7 @@
     }
     .hero-icecream{
         position: absolute;
-        bottom: 0;
+        bottom: -160px;
         left: 117px;
         z-index: 1;
     }
