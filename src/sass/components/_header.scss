@@ -1,0 +1,18 @@
+.header .container{
+        padding-top: 6px;
+}
+
+.logo{
+    @include flex(flex, center, flex-start);
+}
+
+.logo-icon{
+    fill: var(--primery-pink-color);
+    margin-right: 20px;
+}
+
+.logo-name{
+    color: var(--primery-pink-color);
+    @include font(26px, 400, 1.15, 0.04em);
+    text-transform: uppercase;
+}
