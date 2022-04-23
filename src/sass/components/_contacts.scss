@@ -16,74 +16,118 @@
     margin: 0 auto;
     background-color: var(--secondary-bg-color);
 
-    &__list {
-        width: 100%;
-        max-width: 380px;
-        font-weight: 500;
+    &__item-when {
+        li:nth-child(2n) {
+            margin-bottom: 10px;
+        }
+        padding-bottom: 25px;
     }
 
     &__item {
     max-width: 100%;
-    margin-bottom: 20px;
     padding: 43px 20px;
 
     background: #FFFFFF;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+
+        &--black {
+            color: #000000;
+        }
+        &--gray {
+            line-height: 1.5;
+            margin-bottom: 25px;
+        
+            color: #907E82;
+        }       
+        &--pink {
+        color: #FFA5BA;
+        }
+        
     }
     
-    &__item-title {
-        font-size: 12px;
-        line-height: 1.86;
-        
-        display: flex;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.04em;
-        
-        color: #FFFFFF;
-
-        background: #F0D1A5;
-        border-radius: 4px;
-    }
-    &__item-black {
-        color: #000000;
-    }
-    &__item-gray {
-        font-size: 12px;
-        line-height: 1.5;
-        
-        color: #907E82;
-    }
-    &__item-pink {
-        font-size: 12px;
-        line-height: 1.86%;
-
-        color: #FFA5BA;
-    }
-    &__modal-item {
-        font-size: 16px;
+    &__modal-list list {
+        width: 100%;
         justify-content: center;
-        border-radius: 22px;
-        width: 161px;
-        padding: 0 17px;
-        height: 44px;
-        margin: 0 auto;
     }
-    &contacts__button {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.31;
-        width: 161.45px;
-        height: 44px;
-        padding: 0 17px;
-        border-radius: 22px;
+    &__modal-item:first-child {
+        margin-bottom: 10px;
     }
 }
-// .btn-red {
-//     display: flex;
-//     align-items: center;
-//     text-align: center;
-//     background: #D41342;
-//     border: 0;
+
+.contacts__link {
+    &--grey {
+    color: #907E82;
+    }
+
+}
+.contacts__item-title {
+    display: inline-flex;
+    margin-bottom: 25px;
+    padding: 0 25px;
+
+    font-size: 12px;
+    line-height: 1.86;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    background: #F0D1A5;
+    border-radius: 4px;
+}
+.contacts__list {
+    width: 100%;
+    max-width: 380px;
+    font-weight: 500;
+    margin: 0 auto 54px;
+}
+.btn-red {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #D41342;
+    border: 0;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.btn-white {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 0;
+    cursor: pointer;
+    color: #D41443;
+}
+
+// _________Полоса__________
+
+.contacts__item-were::after,
+.contacts__item-when::after {
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+    content: '';
+    border: 1px solid #E1E1E1;
+}
+// .contacts__button.btn {
+//     &-red,
+//     &-white {
+//         font-size: 16px;
+//         line-height: 1.31;
+//         justify-content: center;
+//         align-items: center;
+//         text-align: center;
+//         border-radius: 22px;
+//         width: 162px;
+//         padding: 0 17px;
+//         height: 44px;
+//         margin: 0 auto;
+        
+//     }
+    
 // }
