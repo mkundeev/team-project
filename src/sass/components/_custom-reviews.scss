@@ -1,0 +1,197 @@
+.customer-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-top: 121px;
+  }
+
+  @include desktop {
+    padding-top: 123px;
+  }
+}
+
+.picture-wrap {
+  margin-bottom: 29px;
+
+  @include tablet {
+    margin-bottom: 19px;
+  }
+
+  @include desktop {
+    margin-bottom: 15px;
+  }
+}
+
+.customer-image {
+  margin: 0 auto;
+}
+
+.review-wrap {
+  position: relative;
+  margin: 0 auto;
+  height: 308px;
+  background: $customer-bg-color;
+  margin-bottom: 30px;
+  padding: 43px 50px 20px 50px;
+
+  @media screen and (min-width: 300px) {
+    width: 280px;
+  }
+
+  @include tablet {
+    width: 620px;
+    height: 164px;
+    padding: 30px 50px 28px 40px;
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    width: 926px;
+    height: 138px;
+    padding: 32px 54px 32px 50px;
+    margin-bottom: 15px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 61px;
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/customers/customer.png);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/customers/customer@2x.png);
+    }
+
+    @include tablet {
+      top: 30px;
+      left: 40px;
+    }
+
+    @include desktop {
+      top: 32px;
+      left: 50px;
+    }
+  }
+}
+
+.review-text-wrap {
+  background-image: repeating-linear-gradient(to bottom, $customer-bg-color, $customer-bg-color 11.5%, #E1E1E1 12.3%);
+
+  @include tablet {
+    background-image: repeating-linear-gradient(to bottom, $customer-bg-color, $customer-bg-color 31%, #E1E1E1 32%);
+  }
+
+  @include desktop {
+    background-image: repeating-linear-gradient(to bottom, $customer-bg-color, $customer-bg-color 43%, #E1E1E1 44%);
+  }
+}
+
+.review-text {
+  @include font(12px, 500, 2.58, 0.02em);
+  position: relative;
+  width: 157px;
+  text-align: center;
+  color: var(--main-black);
+  margin: 0 auto;
+
+  @include tablet {
+    @include font(14px, 500, 2.14, 0.04em);
+    width: 460px;
+  }
+
+  @include desktop {
+    @include font(16px, 500, 1.87, 0.04em);
+    width: 750px;
+  }
+}
+
+.review-slider {
+  position: relative;
+  margin: 0 auto;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--button-hover-pink-color);
+  margin-bottom: 18px;
+
+  @include tablet {
+    margin-bottom: 14px;
+  }
+
+  @include desktop {
+    margin-bottom: 15px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--button-hover-pink-color);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    right: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--button-hover-pink-color);
+  }
+}
+
+.review-label {
+  @include font(14px, 500, 1.86, 0.04em);
+  text-align: center;
+  color: var(--main-black);
+
+  @include tablet {
+    @include font(16px, 500, 1.87, 0.04em);
+  }
+
+  @include desktop {
+    @include font(20px, 500, 1.85, 0.04em);
+  }
+}
+
+// --------------------SWIPER--------------------
+
+.swiper {
+  padding-bottom: 35px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+.swiper-pagination-bullet:first-child {
+  position: relative;
+  background-color: transparent;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/customers/house.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
