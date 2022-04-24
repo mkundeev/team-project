@@ -1,6 +1,5 @@
 .customer-section {
   padding-top: 80px;
-  padding-bottom: 80px;
 
   @include tablet {
     padding-top: 121px;
@@ -168,7 +167,7 @@
 // --------------------SWIPER--------------------
 
 .swiper {
-  padding-bottom: 35px;
+  padding-bottom: 60px;
 }
 
 .swiper-pagination-bullet {
