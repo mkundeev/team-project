@@ -160,6 +160,9 @@
     display: flex;
     justify-content: space-between;
     padding-right: 10px;
+    @include desktop{
+        padding-right: 0;
+    }
 }
 .hero-number__list{
     @media screen and (max-width:767px){
@@ -178,6 +181,10 @@
         @include font(28px, 400, 1.14, 0.04em);
         text-transform: uppercase;
         color: var(--primery-pink-color);
+        @include desktop{
+            font-size: 46px;
+            line-height: 1.1;
+        }
         &::after{
             content: '';
             position: absolute;
@@ -190,11 +197,20 @@
             width: 16px;
             background-color: var(--main-white);
             border-radius: 50%;
+            @include desktop {
+                height: 30px;
+                width: 30px;
+                right: -14px;
+                top: -8px;
+            }
         }
     }
     .hero-number__text{
         @include font(8px, 400, 1.25, null);
         color: var(--main-white);
+        @include desktop{
+        @include font(14px, 400, 1.29, null);
+        }
     }
     .hero-number__item + .hero-number__item{
         margin-top: 13px;
