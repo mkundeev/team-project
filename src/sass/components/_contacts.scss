@@ -88,7 +88,7 @@
     
     }
     
-    &__item-title {
+    &__text {
         display: inline-flex;
         margin-bottom: 25px;
         padding: 0 25px;
@@ -109,7 +109,7 @@
             margin-bottom: 32px;
         }
     }
-    &__item-when {
+    &__list-when {
         li:nth-child(2n) {
             margin-bottom: 10px;
             @include tablet {
@@ -160,8 +160,8 @@
 }
 // _________Полоса__________
 
-.contacts__item-where::after,
-.contacts__item-when::after {
+.contacts__wrap-where::after,
+.contacts__list-when::after {
     display: block;
     width: 100%;
     margin: 25px 0;
