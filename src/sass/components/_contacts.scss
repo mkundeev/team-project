@@ -13,178 +13,276 @@
 .contacts {
     padding-top: 86px;
     padding-bottom: 113px;
-    margin: 0 auto;
-    @include font(12px, 500, 1.5, null);
+    
+    @include font(12px, 500, 1.86, null);
     background-color: var(--secondary-bg-color);
-    background-image: linear-gradient(to bottom, 
-    var(--main-white) 9%,var(--secondary-bg-color) 9%);
+    background-image: linear-gradient(to bottom,
+        var(--main-white) 9%, var(--secondary-bg-color) 9%);
+    &-list {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: -20px;
+        margin-top: 0;
 
-    // ___________768px______________
-    @include tablet {
-        padding-top: 119px;
-        padding-bottom: 158px;
-        background-image: linear-gradient(to bottom,
-        var(--main-white) 22%, var(--secondary-bg-color) 22%);
+        margin-bottom: 54px;
     }
-    // __________1280________________
-    @include desktop {
-        @include font(16px, 500, 1.86, 0.04em);
-        padding-top: 132px;
-        padding-bottom: 165px;
-    }
-    &__list {
-        width: 100%;
-        width: 220px;
-        font-weight: 500;
-        margin: 0 auto 54px;
-        @include tablet {
-            @include flex(flex, center, center);
-            width: 100%;
-            margin: 0 auto 81px;
-        }
-        @include desktop {
-            margin: 0 auto 86px;
-        }
-    }
-    &__item {
-        max-width: 100%;
-        padding: 43px 20px;
+    &-list__item {
+        flex-basis: calc(100% / 3 - 20px);
+        min-width: 220px;
+        margin-right: 10px;
+        margin-left: 10px;
         margin-bottom: 20px;
+        
+        min-height: 427px;
         background-color: var(--main-white);
+
+       
+        padding: 43px 20px;
+
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
-    
-        &--black {
-            color: var(--main-black);
+
+        &:last-child {
+            margin-bottom: 0;
         }
-    
-        &--grey {
-            line-height: 1.5;
-            color: var(--main-text-color);
-        }
-    
-        &--pink {
-            color: var(--secondary-pink-color);
-        }
-    
+
         @include tablet {
             margin-bottom: 0;
         }
+
     }
-    
-    &__item:nth-child(2) {
-        margin-left: 0;
-        margin-right: 0;
-    
-        @include tablet {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-    
-        @include desktop {
-            margin-left: 31px;
-            margin-right: 31px;
-        }
-    
-    }
-    
-    &__text {
+    &-list__text-location {
         display: inline-flex;
         margin-bottom: 25px;
         padding: 0 25px;
         @include font(12px, 500, 1.86, 0.04em);
-        align-items: center;
-        text-align: center;
-        text-transform: uppercase;
         color: var(--main-white);
         background: var(--coffee-color);
         border-radius: 4px;
         &.green {
             background-color: var(--green-color);
         }
-        @include tablet {
-            margin-bottom: 30px;
-        }
-        @include desktop {
-            margin-bottom: 32px;
-        }
     }
-    &__list-when {
-        li:nth-child(2n) {
-            margin-bottom: 10px;
-            @include tablet {
-                margin-bottom: 16px;
-            }
-            @include desktop {
-                margin-bottom: 15px;
-            }
-        }
-        @include font(12px, 500, 1.86, null);
-        padding-bottom: 25px;
-    }
-    
-    &__link {
-        &--grey {
-            color: var(--main-text-color);
-        }
-    }
-    &__button-list {
-        @include tablet {
-            @include flex(flex, center, center);
-            width: 100%;
-        }
-    }
-    &__button-item {
-        display: flex;
-        justify-content: center;
-    }
-    &__button-item:first-child {
+    &-list__title {
         margin-bottom: 10px;
+        @include font(12px, 500, 1.86, 0.04em);
+        color: var(--main-black);
+    }
+    &-list__text {
+        @include font(12px, 500, 1.5, 0.04em);
+        color: var(--main-text-color);
+    }
+
+    &-list__wrap-where::after,
+    &-list__when::after {
+        display: block;
+        width: 100%;
+        margin: 25px 0;
+        content: '';
+        border: 1px solid #E1E1E1;
+    
+        // @include tablet {
+        //     margin: 30px 0;
+        // }
+    
+        // @include desktop {
+        //     margin: 32px 0;
+        // }
+    }
+    &-list__text-day {
+        color: var(--main-black);
+    }
+    &-list__text-time {
+        color: var(--secondary-pink-color);
+    }
+    &-list__link {
+        color: var(--main-text-color);
+    }
+
+    &-list__btn-item {
+        
+        &:first-child {
+            margin-bottom: 10px;   
+        }
         @include tablet {
             margin-bottom: 0;
             margin-right: 10px;
         }
+        
         @include desktop {
             margin-right: 15px;
         }
     }
-    &__item-where &__item--black:first-child {
-        margin-bottom: 10px;
-        @include tablet {
-            margin-bottom: 14px;
-        }
-        @include desktop {
-            margin-bottom: 10px;
-        }
-    }
-}
-// _________Полоса__________
 
-.contacts__wrap-where::after,
-.contacts__list-when::after {
-    display: block;
-    width: 100%;
-    margin: 25px 0;
-    content: '';
-    border: 1px solid #E1E1E1;
-    @include tablet {
-        margin: 30px 0;
-    }
-    @include desktop {
-        margin: 32px 0;
-    }
-}
-.contacts__button {
-    width: 162px;
-    height: 44px;
-    @include font(16px, 700, 1.31, null);
-    @include tablet{
-        width: 192px;
+    &-list__button-item {
+        width: 162px;
         height: 44px;
-    }
-    @include desktop {
-        width: 198px;
-        height: 44px;
+        margin: 0 auto;
     }
 
 }
+
+   
+
+    
+// ___________768px______________
+// @include tablet {
+//     padding-top: 119px;
+//     padding-bottom: 158px;
+//     background-image: linear-gradient(to bottom,
+//             var(--main-white) 22%, var(--secondary-bg-color) 22%);
+// }
+
+// __________1280________________
+// @include desktop {
+//     @include font(16px, 500, 1.86, 0.04em);
+//     padding-top: 132px;
+//     padding-bottom: 165px;
+// }
+    
+
+// .contacts-list {
+//     width: 220px;
+//     font-weight: 500;
+//     margin: 0 auto 54px;
+//     @include tablet {
+//         @include flex(flex, center, center);
+//         width: 100%;
+//         margin: 0 auto 81px;
+//     }
+//     @include desktop {
+//         margin: 0 auto 86px;
+//     } 
+//     &__item {
+//         max-width: 100%;
+//         padding: 43px 20px;
+//         margin-bottom: 20px;
+//         background-color: var(--main-white);
+//         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+//         border-radius: 24px;
+    
+//         &--black {
+//             color: var(--main-black);
+//         }
+    
+//         &--grey {
+//             line-height: 1.5;
+//             color: var(--main-text-color);
+//         }
+    
+//         &--pink {
+//             color: var(--secondary-pink-color);
+//         }
+    
+//         @include tablet {
+//             margin-bottom: 0;
+//         }
+//     }
+    
+//     &__item:nth-child(2) {
+        
+//         @include tablet {
+//             margin-left: 20px;
+//             margin-right: 20px;
+//         }
+    
+//         @include desktop {
+//             margin-left: 31px;
+//             margin-right: 31px;
+//         }
+    
+//     }
+    
+//     &__text {
+//         display: inline-flex;
+//         margin-bottom: 25px;
+//         padding: 0 25px;
+//         @include font(12px, 500, 1.86, 0.04em);
+//         align-items: center;
+//         text-align: center;
+//         text-transform: uppercase;
+//         color: var(--main-white);
+//         background: var(--coffee-color);
+//         border-radius: 4px;
+//         &.green {
+//             background-color: var(--green-color);
+//         }
+//         @include tablet {
+//             margin-bottom: 30px;
+//         }
+//         @include desktop {
+//             margin-bottom: 32px;
+//         }
+//     }
+//     &__when {
+//         @include font(12px, 500, 1.86, null);
+//         li:nth-child(2n) {
+//             margin-bottom: 10px;
+//             @include tablet {
+//                 margin-bottom: 16px;
+//             }
+//             @include desktop {
+//                 margin-bottom: 15px;
+//             }
+//         } 
+//     }
+    
+//     &__link {
+//         &--grey {
+//             color: var(--main-text-color);
+//         }
+//     }
+//     &__button {
+//         @include tablet {
+//             @include flex(flex, center, center);
+//             width: 100%;
+//         }
+//     }
+//     &__button-item {
+//         display: flex;
+//         justify-content: center;
+//     }
+//     &__button-item:first-child {
+//         margin-bottom: 10px;
+//         @include tablet {
+//             margin-bottom: 0;
+//             margin-right: 10px;
+//         }
+//         @include desktop {
+//             margin-right: 15px;
+//         }
+//     }
+//     &__item-where &__item--black:first-child {
+//         margin-bottom: 10px;
+//         @include tablet {
+//             margin-bottom: 14px;
+//         }
+//         @include desktop {
+//             margin-bottom: 10px;
+//         }
+//     }
+//     &__wrap-where::after,
+//     &__when::after {
+//         display: block;
+//         width: 100%;
+//         margin: 25px 0;
+//         content: '';
+//         border: 1px solid #E1E1E1;
+    
+//         @include tablet {
+//             margin: 30px 0;
+//         }
+    
+//         @include desktop {
+//             margin: 32px 0;
+//         }
+//     }
+// }
+
+
+
+
