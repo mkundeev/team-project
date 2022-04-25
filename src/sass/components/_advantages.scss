@@ -1,0 +1,105 @@
+.advantages {
+  padding-top: 39px;
+  padding-bottom: 97px;
+  background-color: var(--secondary-bg-color);
+  @include tablet {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+  @include desktop {
+    padding-top: 39px;
+    padding-bottom: 139px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advantages__list {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.advantages__item {
+  max-width: 230px;
+  &:not(:last-child) {
+    margin-bottom: 38px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    margin-bottom: 16px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    @include tablet {
+      margin-bottom: 36px;
+    }
+    @include desktop {
+      margin-bottom: 40px;
+    }
+  }
+  &:nth-child(1)::before {
+    background-image: url(../images/advantages-milk.png);
+  }
+  &:nth-child(2)::before {
+    background-image: url(../images/advantages-apple.png);
+  }
+  &:nth-child(3)::before {
+    background-image: url(../images/advantages-heart.png);
+  }
+  @include tablet {
+    max-width: 180px;
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+  @include desktop {
+    max-width: 330px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.advantages__pre-text {
+  margin-bottom: 16px;
+  display: inline-block;
+  font-family: Titan One;
+  @include font(36px, 400, 1.14, 0.04em);
+  text-transform: uppercase;
+
+  color: var(--primery-pink-color);
+  @include tablet {
+    margin-bottom: 13px;
+    @include font(48px, 400, 1.15, 0.04em);
+  }
+  @include desktop {
+    margin-bottom: 15px;
+    @include font(50px, 400, 1.14, 0.04em);
+  }
+}
+
+.advantages__text {
+  font-family: DM Sans;
+  @include font(12px, 700, 1.7, 0.04em);
+
+  color: var(--main-black);
+  @include tablet {
+    @include font(14px, 700, 1.74, 0.04em);
+  }
+  @include desktop {
+    @include font(16px, 400, 1.76, 0.02em);
+  }
+}
