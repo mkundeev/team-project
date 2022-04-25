@@ -99,16 +99,16 @@
   width: 500px;
   margin: 0 auto;
   position: relative;
-  background-color: var(--hero-bg-color);
+  background-color: #fff5f6;
   border-radius: 5%;
-  border: 5px solid #e38ca0;
+  border: 5px solid var(--hero-bg-color);
 
   & img {
     border-radius: 20%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-    border: 5px solid #e38ca0;
+    border: 5px solid var(--hero-bg-color);
   }
 }
 
@@ -134,5 +134,5 @@
 .backdrop .swiper-pagination-horizontal {
   @include flex(flex, center, center);
   height: 30px;
-  background-color: #e38ca0;
+  background-color: var(--hero-bg-color);
 }
