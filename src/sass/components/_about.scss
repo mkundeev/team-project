@@ -1,9 +1,166 @@
 .about {
-  font-size: 42px;
-  color: #303030;
+  padding-top: 125px;
+  padding-bottom: 39px;
+  background-color: var(--secondary-bg-color);
+  @media screen and (max-width: 767px) {
+    background-image: url(../images/about-milk-mob.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about-milk-mob@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 92%;
+  }
+  @include tablet {
+    padding-top: 130px;
+    padding-bottom: 66px;
+  }
+  @include desktop {
+    padding-top: 125px;
+    padding-bottom: 0px;
+    background-image: url(../images/about-milk.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about-milk@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 92%;
+  }
+}
+
+.about__container {
   text-align: center;
 }
 
-.text {
-  color: red;
+.about__pre-title {
+  margin-bottom: 15px;
+  font-family: Titan One, sans-serif;
+  @include font(18px, 400, 1.17, null);
+  text-transform: uppercase;
+
+  color: var(--secondary-pink-color);
+  @include tablet {
+    margin-bottom: 16px;
+    @include font(26px, 400, 1.15, null);
+  }
+  @include tablet {
+    margin-bottom: 15px;
+    @include font(30px, 400, 1.13, 0.04em);
+  }
+}
+
+.about__title {
+  margin-bottom: 26px;
+  font-family: Titan One, sans-serif;
+  @include font(34px, 400, 1.15, 0.04em);
+  text-transform: uppercase;
+
+  color: var(--primery-pink-color);
+  @include tablet {
+    margin-bottom: 100px;
+    @include font(48px, 400, 1.15, null);
+  }
+  @include tablet {
+    margin-bottom: 106px;
+    @include font(58px, 400, 1.14, 0.06em);
+  }
+}
+
+.about__content {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: start;
+  &::before {
+    content: '';
+    display: block;
+    width: 280px;
+    height: 279px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/about-mob.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about-mob@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include tablet {
+      width: 340px;
+      height: 339px;
+      margin-top: -50px;
+      margin-left: 0;
+      margin-right: 17px;
+      background-image: url(../images/about-tab.png);
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/about-tab@2x.png);
+      }
+    }
+    @include desktop {
+      width: 516px;
+      height: 516px;
+      margin-top: -51px;
+      margin-right: 74px;
+      background-image: url(../images/about.png);
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/about@2x.png);
+      }
+    }
+  }
+  @include tablet {
+    display: flex;
+  }
+}
+
+.about__text {
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  @include font(12px, 500, 1.62, null);
+
+  color: var(--main-text-color);
+  &:not(:nth-child(2)) {
+    margin-bottom: 47px;
+  }
+  @include tablet {
+    max-width: 340px;
+    @include font(14px, 500, 1.76, null);
+  }
+  @include tablet {
+    max-width: 463px;
+    @include font(16px, 500, 1.76, 0.04em);
+  }
+}
+
+.about__text--color {
+  color: var(--main-black);
+}
+
+.about__text--margin {
+  margin-bottom: 20px;
+}
+
+.btn--about {
+  font-size: 14px;
+  cursor: pointer;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 8px;
+    background-image: url(../images/symbol-defs.svg#icon-arrow-1);
+  }
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
