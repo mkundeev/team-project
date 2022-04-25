@@ -136,3 +136,16 @@
   height: 30px;
   background-color: var(--hero-bg-color);
 }
+
+.backdrop .swiper-pagination-bullet {
+  background: #fff5f6;
+  opacity: 1;
+
+  &:not(:last-child) {
+    margin-right: 18px !important;
+  }
+}
+
+.backdrop .swiper-pagination-bullet-active {
+  background: #D31342;
+}
