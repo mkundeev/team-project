@@ -196,13 +196,15 @@
 
 .backdrop .swiper-pagination-horizontal {
   @include flex(flex, center, center);
-  height: 30px;
+  height: 20px;
   background-color: var(--hero-bg-color);
 
+  @include tablet {
+    height: 25px;
+  }
+
   @include desktop {
-    @include flex(flex, center, center);
     height: 30px;
-    background-color: var(--hero-bg-color);
   }
 }
 
