@@ -1,24 +1,45 @@
 .products {
   padding-top: 121px;
   padding-bottom: 98px;
+  @include tablet {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
   .container {
     text-align: center;
   }
   &__text {
+    font-family: 'Titan One';
+    text-transform: uppercase;
     @include font(18px, null, 1.16, null);
-    color: $second-text-color;
-    margin-bottom: $margin-bottom;
+    color: var(--secondary-pink-color);
+    margin-bottom: 15px;
+    @include tablet {
+      @include font(26px, null, 1.15, null);
+    }
   }
+
   &__title {
+    text-transform: uppercase;
+    font-family: 'Titan One';
     @include font(34px, 400, 1.14, 0.04em);
-    color: $first-text-color;
+    color: var(--primery-pink-color);
     margin-bottom: 144px;
+    @include tablet {
+      margin-bottom: 150px;
+      @include font(48px, null, 1.15, null);
+    }
   }
   &-list {
     margin-bottom: -30px;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    @include tablet {
+      display: flex;
+      margin-bottom: 0;
+      margin-right: -20px;
+    }
   }
 
   &-list__item {
@@ -28,21 +49,30 @@
     border-radius: 24px;
     margin-bottom: 130px;
     padding: 161px 40px 41px 40px;
+    @include tablet {
+      width: 220px;
+      padding: 152px 11px 40px 11px;
+      margin-bottom: 0;
+      width: calc(100% / 3 - 20px);
+      margin-right: 20px;
+    }
 
     &.cream {
-      background-color: $ice-cream-bg-color;
+      background-color: var(--hero-bg-color);
     }
     &.coffee {
-      background-color: $ice-coffee-bg-color;
+      background-color: var(--coffee-color);
     }
     &.milkshakes {
-      background-color: $milkshakes-bg-color;
+      background-color: var(--green-color);
       margin-bottom: 0;
     }
   }
   &-list__title {
+    text-transform: uppercase;
+    font-family: 'Titan One';
     @include font(20px, 400, 1.15, 0.04em);
-    color: $primary-text-color;
+    color: var(--main-white);
     .cream &::before {
       content: url(../images/ice_cream-mob-1x.png);
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -68,6 +98,33 @@
         }
       }
     }
+    @include tablet {
+      .cream &::before {
+        content: url(../images/ice_cream-tab-1x.png);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          .cream &::before {
+            content: url(../images/ice_cream-tab-2x.png);
+          }
+        }
+      }
+      .coffee &::before {
+        content: url(../images/ice_coffee-tab-1x.png);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          .coffee &::before {
+            content: url(../images/ice_coffee-tab-2x.png);
+          }
+        }
+      }
+
+      .milkshakes &::before {
+        content: url(../images/milkshakes-tab-1x.png);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          .milkshakes &::before {
+            content: url(../images/milkshakes-tab-2x.png);
+          }
+        }
+      }
+    }
 
     .cream &::before,
     .coffee &::before,
@@ -75,6 +132,10 @@
       position: absolute;
       left: 16px;
       bottom: 346px;
+      @include tablet {
+        left: 0;
+        bottom: 363px;
+      }
     }
 
     .cream &::after,
@@ -82,15 +143,32 @@
     .milkshakes &::after {
       position: absolute;
       content: '...';
-      left: 130px;
+      left: 127px;
       bottom: 260px;
-      font-size: 20px;
+      font-size: 25px;
+      @include tablet {
+        left: 97px;
+        bottom: 274px;
+        font-size: 27px;
+      }
     }
   }
   &-list__text {
     @include font(14px, 700, 1.5, 0.04em);
-    color: $primary-text-color;
+    color: var(--main-white);
     margin-top: 66px;
+    @include tablet {
+      display: none;
+    }
+    &-tab {
+      display: none;
+      @include tablet {
+        @include font(null, null, 1.76, null);
+        color: var(--main-white);
+        margin-top: 66px;
+        display: block;
+      }
+    }
   }
 
   &-list__btn {
@@ -100,34 +178,11 @@
     width: 40px;
     height: 40px;
     margin-top: 30px;
-    background-color: $button-first-text-color;
+    background-color: var(--main-white);
     cursor: pointer;
 
-    &::before {
-      content: '';
-      position: absolute;
-      border: 1px solid $first-text-color;
-      background-color: #d41443;
-      width: 11px;
-      top: 51%;
-      left: 36%;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-top: 3px solid #d41443;
-      border-left: 3px solid #d41443;
-      transform: rotate(135deg);
-      top: 41%;
-      left: 42%;
-    }
-
-    // &:hover::before,
-    // &:hover::after{
-    //   translate:transform rotate(360deg);
+    // & svg{
+    //   transition: transform rotate(360deg) 350ms linear;
     // }
   }
 }
