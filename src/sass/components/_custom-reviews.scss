@@ -172,7 +172,7 @@
   padding-bottom: 55px;
 }
 
-.swiper-pagination-bullet {
+.customer-section .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background: #D9D9D9;
@@ -200,11 +200,11 @@
   }
 }
 
-.swiper-pagination-bullet-active {
+.customer-section .swiper-pagination-bullet-active {
   background: #D31342;
 }
 
-.swiper-pagination-bullet:first-child.swiper-pagination-bullet-active::before {
+.customer-section .swiper-pagination-bullet:first-child.swiper-pagination-bullet-active::before {
   content: '';
   display: block;
   width: 12px;
