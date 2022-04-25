@@ -11,13 +11,24 @@
     margin: -1px;
 }
 .contacts {
-    padding-top: 86px;
+    padding-top: 46px;
     padding-bottom: 113px;
     
-    @include font(12px, 500, 1.86, null);
     background-color: var(--secondary-bg-color);
     background-image: linear-gradient(to bottom,
-        var(--main-white) 9%, var(--secondary-bg-color) 9%);
+        var(--main-white) 6.5%, var(--secondary-bg-color) 6.5%);
+        @include tablet {
+            padding-top: 79px;
+            padding-bottom: 158px;
+            background-image: linear-gradient(to bottom,
+                var(--main-white) 17%, var(--secondary-bg-color) 17%);
+        }
+        @include desktop {
+            padding-top: 92px;
+            padding-bottom: 165px;
+            background-image: linear-gradient(to bottom,
+                var(--main-white) 20%, var(--secondary-bg-color) 20%);
+        }
     &-list {
         padding: 0;
         display: flex;
@@ -28,21 +39,20 @@
         margin-bottom: -20px;
         margin-top: 0;
 
-        margin-bottom: 54px;
     }
     &-list__item {
         flex-basis: calc(100% / 3 - 20px);
         min-width: 220px;
+        min-height: 427px;
+
         margin-right: 10px;
         margin-left: 10px;
         margin-bottom: 20px;
-        
-        min-height: 427px;
-        background-color: var(--main-white);
 
-       
         padding: 43px 20px;
-
+        
+        background-color: var(--main-white);
+        @include font(12px, 500, 1.86, null);
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
 
@@ -52,8 +62,15 @@
 
         @include tablet {
             margin-bottom: 0;
+            min-height: 544px;
+            padding: 50px 31px;
+            @include font(14px, 500, 1.86, null);
         }
-
+        @include desktop {
+            min-height: 572px;
+            padding: 51px 44px;
+            @include font(16px, 500, 1.86, 0.04em);
+        }
     }
     &-list__text-location {
         display: inline-flex;
@@ -66,15 +83,32 @@
         &.green {
             background-color: var(--green-color);
         }
+        @include tablet {
+            @include font(16px, 500, 1.86, 0.04em);
+        }
     }
     &-list__title {
         margin-bottom: 10px;
         @include font(12px, 500, 1.86, 0.04em);
         color: var(--main-black);
+
+        @include tablet {
+            @include font(14px, 500, 1.86, 0.04em);
+        }
+        @include desktop {
+            @include font(16px, 500, 1.86, 0.04em);
+        }
     }
     &-list__text {
         @include font(12px, 500, 1.5, 0.04em);
         color: var(--main-text-color);
+
+        @include tablet {
+            @include font(14px, 500, 1.66, null);
+        }
+        @include desktop {
+            @include font(16px, 500, 1.83, 0.04em);
+        }
     }
 
     &-list__wrap-where::after,
@@ -85,13 +119,13 @@
         content: '';
         border: 1px solid #E1E1E1;
     
-        // @include tablet {
-        //     margin: 30px 0;
-        // }
+        @include tablet {
+            margin: 30px 0;
+        }
     
-        // @include desktop {
-        //     margin: 32px 0;
-        // }
+        @include desktop {
+            margin: 32px 0;
+        }
     }
     &-list__text-day {
         color: var(--main-black);
@@ -100,8 +134,23 @@
         color: var(--secondary-pink-color);
     }
     &-list__link {
+        @include font(12px, 500, 1.8, null);
         color: var(--main-text-color);
+
+        @include tablet {
+            @include font(14px, 500, 1.83, null);
+        }
+        @include desktop {
+            @include font(16px, 500, 1.83, null);
+        }
     }
+
+    &-list__button {
+        @include tablet {
+           display: flex;
+           justify-content: center;
+        }
+     }
 
     &-list__btn-item {
         
@@ -126,7 +175,6 @@
 
 }
 
-   
 
     
 // ___________768px______________
