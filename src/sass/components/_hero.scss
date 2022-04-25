@@ -1,5 +1,5 @@
 .hero {
-    
+    overflow-x: hidden;
 
     background-color: var(--hero-bg-color);
     padding-bottom: 160px;
@@ -14,6 +14,8 @@
     }
     .container{
     position: relative;
+   
+   
     }
     .hero-content {
         position: relative;
@@ -77,6 +79,7 @@
         }
     }
     .hero-circle{
+        
         position: absolute;
         left: 36px;
         bottom: -85px;
