@@ -1,9 +1,7 @@
 .advantages {
-  padding-top: 39px;
   padding-bottom: 97px;
   background-color: var(--secondary-bg-color);
   @include tablet {
-    padding-top: 66px;
     padding-bottom: 140px;
   }
   @include desktop {

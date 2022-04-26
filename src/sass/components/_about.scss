@@ -8,10 +8,12 @@
     @media screen and (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/about-milk-mob@2x.png);
+      background-image: url(../images/about-milk-mob-left@2x.png),
+        url(../images/about-milk-mob-right@2x.png);
+      background-size: 160px 133px;
     }
     background-repeat: no-repeat;
-    background-position-y: 735px;
+    background-position-y: 740px;
     background-position-x: 0%, 100%;
   }
   @include tablet {
@@ -28,7 +30,7 @@
       background-image: url(../images/about-milk@2x.png);
     }
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 534px;
     background-position-y: 350px;
   }
 }
@@ -83,7 +85,6 @@
   &::before {
     content: '';
     display: block;
-    width: 280px;
     height: 279px;
     margin-left: auto;
     margin-right: auto;
@@ -96,6 +97,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    @media screen and (max-width: 767px) {
+      max-width: 280px;
+    }
     @include tablet {
       width: 340px;
       height: 339px;
@@ -136,6 +140,12 @@
   color: var(--main-text-color);
   &:not(:nth-child(2)) {
     margin-bottom: 47px;
+    @include tablet {
+      margin-bottom: 62px;
+    }
+    @include desktop {
+      margin-bottom: 35px;
+    }
   }
   @include tablet {
     max-width: 340px;
@@ -144,6 +154,9 @@
   @include desktop {
     max-width: 463px;
     @include font(16px, 500, 1.76, 0.04em);
+    &:not(:first-child) {
+      @include font(14px, 500, 1.94, 0.04em);
+    }
   }
 }
 
@@ -156,17 +169,16 @@
 }
 
 .btn--about {
+  @include font(14px, 700, 1.29, null);
   font-size: 14px;
   cursor: pointer;
-  &::after {
-    content: '';
-    display: inline-block;
-    width: 5px;
-    height: 8px;
-    background-image: url(../images/symbol-defs.svg#icon-arrow-1);
-  }
   @media screen and (max-width: 767px) {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.btn__icon {
+  margin-left: 14px;
+  stroke: var(--primery-pink-color);
 }
