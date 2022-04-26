@@ -182,6 +182,8 @@
       position: absolute;
       left: 16px;
       bottom: 346px;
+      animation: flipInY;
+      animation-duration: 3s;
       @include tablet {
         left: 0;
         bottom: 363px;
@@ -268,7 +270,6 @@
   background-color: transparent;
   transform: rotateX(360deg) scale(1.3);
   transition-duration: 350ms;
-  
 }
 
 .produckts-list__input:checked ~ .products-list__checkbox-icon {
