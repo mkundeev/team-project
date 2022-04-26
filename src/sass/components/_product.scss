@@ -204,7 +204,7 @@
         bottom: 274px;
         font-size: 27px;
       }
-      @include desktop{
+      @include desktop {
         left: 151px;
         bottom: 290px;
       }
@@ -214,20 +214,27 @@
     @include font(14px, 700, 1.5, 0.04em);
     color: var(--main-white);
     margin-top: 66px;
+    transition-duration: 300ms;
     @include tablet {
       display: none;
+      transition-duration: 300ms;
+    }
+    @include desktop {
+      margin-top: 70px;
     }
     &-tab {
-      display: none;
+     display: none;
       @include tablet {
         @include font(null, null, 1.76, null);
         color: var(--main-white);
         margin-top: 66px;
         display: block;
+        transform: rotateX(0);
+        transition-duration: 300ms;
       }
       @include desktop {
         margin-top: 70px;
-        @include font(16px, null, null, null);       
+        @include font(16px, null, null, null);
       }
     }
   }
@@ -247,9 +254,50 @@
     @include desktop {
       margin-top: 62px;
     }
-
-    // & svg{
-    //   transition: transform rotate(360deg) 350ms linear;
-    // }
   }
+}
+
+.products-list__checkbox-icon {
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  margin-top: 30px;
+  transform: rotateY(0);
+  transition-duration: 300ms;
+  cursor: pointer;
+  @include tablet {
+    margin-top: 40px;
+  }
+  @include desktop {
+    margin-top: 62px;
+  }
+}
+
+.produckts-list__input {
+  position: absolute;
+  display: none;
+}
+
+// .produckts-list__input:checked + .products-list__text{
+//    background-color: transparent;
+//     transform: rotateX(360deg) scale(1.3);
+//     transition-duration: 300ms;
+//     display: block;
+// }
+
+.produckts-list__input:checked ~ .products-list__text-tab {
+    background-color: transparent;
+    transform: rotateX(360deg) scale(1.3);
+    transition-duration: 300ms;
+    // display: none;
+}
+.products-list__checkbox-icon:hover,
+.products-list__checkbox-icon:focus {
+  background-color: #ecebeb;
+}
+.produckts-list__input:checked ~ .products-list__checkbox-icon {
+  background-color: #ecebeb;
+  transform: rotateY(360deg) scale(1.3);
+  transition-duration: 300ms;
 }
