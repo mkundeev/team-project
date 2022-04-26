@@ -94,9 +94,7 @@
 
 .modal {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(flex, center, center);
   height: 280px;
   width: 280px;
   margin: 0 auto;
