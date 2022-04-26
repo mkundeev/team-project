@@ -155,6 +155,7 @@
   &:hover {
     box-shadow: 1px 0px 28px 1px var(--primery-pink-color);
     background-color: var(--button-hover-pink-color);
+    border-color: var(--button-hover-pink-color);
   }
 
   @include tablet {
