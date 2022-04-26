@@ -87,7 +87,6 @@
 
   &.is-hidden .modal {
     opacity: 1;
-    // transform: rotate(20deg) scale(0.3);
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
