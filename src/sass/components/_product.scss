@@ -58,13 +58,13 @@
 
   &-list__item {
     position: relative;
-    width: 280px;
+    min-width: 280px;
     height: 485px;
     border-radius: 24px;
     margin-bottom: 130px;
     padding: 161px 40px 41px 40px;
     @include tablet {
-      width: 220px;
+      min-width: 220px;
       padding: 152px 11px 40px 11px;
       margin-bottom: 0;
       width: calc(100% / 3 - 20px);
@@ -72,7 +72,7 @@
     }
 
     @include desktop {
-      width: 329px;
+      min-width: 329px;
       height: 525px;
       padding: 163px 44px 50px 44px;
       width: calc(100% / 3 - 29px);
@@ -93,8 +93,12 @@
   &-list__title {
     text-transform: uppercase;
     font-family: 'Titan One';
+    margin-bottom: 66px;
     @include font(20px, 400, 1.15, 0.04em);
     color: var(--main-white);
+    @include desktop {
+      margin-bottom: 70px;
+    }
     .cream &::before {
       content: url(../images/ice_cream-mob-1x.png);
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -212,33 +216,37 @@
       }
     }
   }
-  &-list__text {
-    @include font(14px, 700, 1.5, 0.04em);
+}
+
+.products-list__span {
+  @include font(14px, 700, 1.5, 0.04em);
+  color: var(--main-white);
+  transform: rotateY(0);
+  transition-duration: 300ms;
+  display: block;
+  width: 200px;
+  height: 124px;
+  @include tablet {
+    @include font(null, null, 1.76, null);
     color: var(--main-white);
-    margin-top: 66px;
-    transition-duration: 300ms;
-    @include tablet {
-      display: none;
-    }
-    &-tab {
-      display: none;
-      @include tablet {
-        @include font(null, null, 1.76, null);
-        color: var(--main-white);
-        margin-top: 66px;
-        display: block;
-        transform: rotateX(0);
-        transition-duration: 300ms;
-      }
-      @include desktop {
-        margin-top: 70px;
-        @include font(16px, null, null, null);
-      }
-    }
+    width: 198px;
+  }
+  @include desktop {
+    @include font(16px, null, null, null);
+    width: 241px;
+    height: 106px;
+  }
+}
+.products-list__span-two {
+  @include tablet {
+    opacity: 0;
   }
 }
 
 .products-list__checkbox-icon {
+  position: absolute;
+  left: 120px;
+  bottom: 41px;
   border-radius: 50px;
   width: 40px;
   height: 40px;
@@ -248,10 +256,14 @@
   transition-duration: 300ms;
   cursor: pointer;
   @include tablet {
+    left: 90px;
+    bottom: 40px;
     margin-top: 40px;
   }
   @include desktop {
     margin-top: 62px;
+    left: 144px;
+    bottom: 50px;
   }
 }
 
@@ -260,16 +272,10 @@
   display: none;
 }
 
-.produckts-list__input:checked + .products-list__text {
+.produckts-list__input:checked + .products-list__span {
   background-color: transparent;
-  transform: rotateX(360deg) scale(1.3);
+  transform: rotateX(360deg) scale(1.25);
   transition-duration: 300ms;
-}
-
-.produckts-list__input:checked ~ .products-list__text-tab {
-  background-color: transparent;
-  transform: rotateX(360deg) scale(1.3);
-  transition-duration: 350ms;
 }
 
 .produckts-list__input:checked ~ .products-list__checkbox-icon {
