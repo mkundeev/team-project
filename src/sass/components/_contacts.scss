@@ -216,7 +216,17 @@
     height: 44px;
     margin: 0 auto;
     cursor: pointer;
+    padding-left: 0;
+    padding-right: 0;
   }
+}
+.contacts-arrow-icon {
+  stroke: var(--main-white);
+  margin-left: 10px;
+}
+.contacts-arrow-icon.red {
+  stroke: var(--primery-pink-color);
+  margin-left: 10px;
 }
 
 .contacts-modal {
