@@ -61,12 +61,30 @@
   }
   &:nth-child(1)::before {
     background-image: url(../images/advantages-milk.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/advantages-milk@2x.png);
+      background-size: contain;
+    }
   }
   &:nth-child(2)::before {
     background-image: url(../images/advantages-apple.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/advantages-apple@2x.png);
+      background-size: contain;
+    }
   }
   &:nth-child(3)::before {
     background-image: url(../images/advantages-heart.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/advantages-heart@2x.png);
+      background-size: contain;
+    }
   }
   @include tablet {
     width: calc((100% - 120px) / 3);
@@ -85,7 +103,9 @@
   display: inline-block;
   font-family: Titan One;
   @include font(36px, 400, 1.14, 0.04em);
-  text-transform: uppercase;
+  @media screen and (max-width: 767px) {
+    text-transform: uppercase;
+  }
 
   color: var(--primery-pink-color);
   @include tablet {
