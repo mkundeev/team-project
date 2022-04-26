@@ -137,6 +137,7 @@
         margin-left: 30px;}
     }
     .milk-check-box__text{
+        display: inline-block;
         width: 114px;
         @include font(8px, 400, 1.5, null);
         color: var(--main-white);
@@ -153,11 +154,25 @@
         width: 18px;
         background-color: var(--main-white);
         border-radius: 50%;
+        transform: rotateY(0);
+        transition-duration: 300ms;
+        cursor: pointer;
         @include flex(flex, center, center);
         @include desktop {
             height: 26px;
             width: 26px;
         }
+    }
+    .produckts-list__input:checked+.milk-check-box__text {
+        background-color: transparent;
+        transform: rotateX(360deg) scale(1.2);
+        transition-duration: 300ms;
+    }
+    
+    .produckts-list__input:checked~.white-circle {
+        background-color: #ecebeb;
+        transform: rotateY(360deg) scale(1.2);
+        transition-duration: 300ms;
     }
 }
 .hero-tab-wrap{
