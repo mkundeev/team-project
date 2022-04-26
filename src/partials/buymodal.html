@@ -1,0 +1,59 @@
+<div class="backdrop is-hidden" data-buy1>
+    <div class="modal order-modal">
+        <button type="button" class="modal-button-close" data-buy-close1>
+            <svg width="28" height="28">
+                <use href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
+        </button>
+        
+        <form class="order-form">
+            <b class="order-form__header">Your order</b>
+            <ul class="order-list">
+                <li class="order-list__item">
+                        <img class="order-icecream"
+                            srcset="./images/ice_cream-mob-1x.png 1x, ./images/ice_cream-mob-2x.png 2x"
+                            src="./images/ice_cream-mob-1x.png" alt="IceCream" />
+                    <div class="item-description">
+                        <p class="item-name">Vanilla strawberry ice cream</p>
+                        <p class="item-price">$4.25</p>
+                        <div class="order-quntity-wrap">
+                            <label class="order-label" for="number">Quantity:</label>
+                            <input class="order__input" type="number" name="number" min="0">
+                        </div>
+                    </div>
+                </li>
+                <li class="order-list__item">
+                    
+                        <img class="order-icecream" srcset="./images/ice_coffee-mob-1x.png, ./images/ice_coffee-mob-2x.png 2x"
+                            src="./images/ice_cream-mob-1x.png" alt="Columbia ice coffee" />
+                    
+                    <div class="item-description">
+                        <p class="item-name">Columbia ice coffee</p>
+                        <p class="item-price">$4.25</p>
+                        <div class="order-quntity-wrap">
+                            <label class="order-label" for="number">Quantity:</label>
+                            <input class="order__input" type="number" name="number" min="0">
+                        </div>
+                    </div>
+                </li>
+                <li class="order-list__item">
+                        <img class="order-icecream" srcset="./images/milkshakes-mob-1x.png 1x, ./images/milkshakes-mob-2x.png 2x"
+                            src="./images/ice_cream-mob-1x.png" alt="Сhocolate milkshakes" />
+                    <div class="item-description">
+                        <p class="item-name">Сhocolate milkshakes</p>
+                        <p class="item-price">$4.25</p>
+                        <div class="order-quntity-wrap">
+                            <label class="order-label" for="number">Quantity:</label>
+                            <input class="order__input" type="number" name="number" min="0">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <button type="button" class="btn btn--pink" data-fran-open2>Next
+                <svg class="menu-arrow-icon" width="14" height="10">
+                    <use href="./images/icons.svg#icon-arrow-1"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
