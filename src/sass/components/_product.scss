@@ -217,13 +217,9 @@
     transition-duration: 300ms;
     @include tablet {
       display: none;
-      transition-duration: 300ms;
-    }
-    @include desktop {
-      margin-top: 70px;
     }
     &-tab {
-     display: none;
+      display: none;
       @include tablet {
         @include font(null, null, 1.76, null);
         color: var(--main-white);
@@ -236,23 +232,6 @@
         margin-top: 70px;
         @include font(16px, null, null, null);
       }
-    }
-  }
-
-  &-list__btn {
-    position: relative;
-    border: none;
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
-    margin-top: 30px;
-    background-color: var(--main-white);
-    cursor: pointer;
-    @include tablet {
-      margin-top: 40px;
-    }
-    @include desktop {
-      margin-top: 62px;
     }
   }
 }
@@ -279,25 +258,26 @@
   display: none;
 }
 
-// .produckts-list__input:checked + .products-list__text{
-//    background-color: transparent;
-//     transform: rotateX(360deg) scale(1.3);
-//     transition-duration: 300ms;
-//     display: block;
-// }
+.produckts-list__input:checked + .products-list__text {
+  background-color: transparent;
+  transform: rotateX(360deg) scale(1.3);
+  transition-duration: 300ms;
+}
 
 .produckts-list__input:checked ~ .products-list__text-tab {
-    background-color: transparent;
-    transform: rotateX(360deg) scale(1.3);
-    transition-duration: 300ms;
-    // display: none;
+  background-color: transparent;
+  transform: rotateX(360deg) scale(1.3);
+  transition-duration: 350ms;
+  
 }
-.products-list__checkbox-icon:hover,
-.products-list__checkbox-icon:focus {
-  background-color: #ecebeb;
-}
+
 .produckts-list__input:checked ~ .products-list__checkbox-icon {
   background-color: #ecebeb;
   transform: rotateY(360deg) scale(1.3);
   transition-duration: 300ms;
+}
+
+.products-list__checkbox-icon:hover,
+.products-list__checkbox-icon:focus {
+  background-color: #ecebeb;
 }
