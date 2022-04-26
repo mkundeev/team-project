@@ -26,16 +26,27 @@
 }
 
 .advantages__list {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 36px;
+  }
   @include tablet {
     display: flex;
+    max-width: 100%;
+    margin-right: -60px;
+    margin-bottom: -60px;
+  }
+  @include desktop {
+    margin-right: -30px;
+    margin-bottom: -30px;
   }
 }
 
 .advantages__item {
-  max-width: 230px;
-  &:not(:last-child) {
-    margin-bottom: 38px;
+  max-width: 100%;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 36px;
   }
+
   &::before {
     content: '';
     display: block;
@@ -60,16 +71,14 @@
     background-image: url(../images/advantages-heart.png);
   }
   @include tablet {
-    max-width: 180px;
-    &:not(:last-child) {
-      margin-right: 60px;
-    }
+    width: calc((100% - 120px) / 3);
+    margin-right: 60px;
+    margin-bottom: 60px;
   }
   @include desktop {
-    max-width: 330px;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -96,6 +105,9 @@
   @include font(12px, 700, 1.7, 0.04em);
 
   color: var(--main-black);
+  @media screen and (max-width: 767px) {
+    max-width: 230px;
+  }
   @include tablet {
     @include font(14px, 700, 1.74, 0.04em);
   }

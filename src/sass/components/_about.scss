@@ -3,15 +3,16 @@
   padding-bottom: 39px;
   background-color: var(--secondary-bg-color);
   @media screen and (max-width: 767px) {
-    background-image: url(../images/about-milk-mob.png);
+    background-image: url(../images/about-milk-mob-left.png),
+      url(../images/about-milk-mob-right.png);
     @media screen and (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/about-milk-mob@2x.png);
     }
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position-y: 92%;
+    background-position-y: 735px;
+    background-position-x: 0%, 100%;
   }
   @include tablet {
     padding-top: 130px;
@@ -28,7 +29,7 @@
     }
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-y: 92%;
+    background-position-y: 350px;
   }
 }
 
@@ -47,7 +48,7 @@
     margin-bottom: 16px;
     @include font(26px, 400, 1.15, null);
   }
-  @include tablet {
+  @include desktop {
     margin-bottom: 15px;
     @include font(30px, 400, 1.13, 0.04em);
   }
@@ -60,11 +61,16 @@
   text-transform: uppercase;
 
   color: var(--primery-pink-color);
+  @media screen and (max-width: 767px) {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @include tablet {
     margin-bottom: 100px;
     @include font(48px, 400, 1.15, null);
   }
-  @include tablet {
+  @include desktop {
     margin-bottom: 106px;
     @include font(58px, 400, 1.14, 0.06em);
   }
@@ -135,7 +141,7 @@
     max-width: 340px;
     @include font(14px, 500, 1.76, null);
   }
-  @include tablet {
+  @include desktop {
     max-width: 463px;
     @include font(16px, 500, 1.76, 0.04em);
   }
