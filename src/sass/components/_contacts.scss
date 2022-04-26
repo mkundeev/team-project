@@ -149,7 +149,6 @@
     width: 100%;
     margin: 25px 0;
     content: '';
-    // border: 1px solid #E1E1E1;
     background-color: #E1E1E1;
     height: 1px;
 
@@ -220,7 +219,23 @@
     cursor: pointer;
     padding-left: 0;
     padding-right: 0;
+    @include tablet {
+      width: 174px;
+    }
+    @include desktop {
+      width: 180px;
+    }
   }
+  &-list__button-item.btn--pink {
+    @include tablet {
+      width: 192px;
+    }
+    
+    @include desktop {
+      width: 198px;
+    }
+  }
+
 }
 .contacts-arrow-icon {
   stroke: var(--main-white);
