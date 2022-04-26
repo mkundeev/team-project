@@ -137,6 +137,7 @@
         margin-left: 30px;}
     }
     .milk-check-box__text{
+        display: inline-block;
         width: 114px;
         @include font(8px, 400, 1.5, null);
         color: var(--main-white);
