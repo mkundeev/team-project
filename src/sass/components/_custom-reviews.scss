@@ -184,30 +184,14 @@
   &:not(:last-child) {
     margin-right: 18px !important;
   }
-
-  &:first-child {
-    position: relative;
-    background-color: transparent;
-
-    &::before {
-      content: '';
-      display: block;
-      width: 12px;
-      height: 12px;
-      background-image: url(../images/customers/house1.svg);
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 1;
-    }
-  }
 }
 
 .customer-section .swiper-pagination-bullet-active {
-  background: #D31342;
+  position: relative;
+  background-color: transparent;
 }
 
-.customer-section .swiper-pagination-bullet:first-child.swiper-pagination-bullet-active::before {
+.customer-section .swiper-pagination-bullet-active::before {
   content: '';
   display: block;
   width: 12px;
