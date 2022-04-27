@@ -29,8 +29,19 @@
   @include desktop {
     padding-top: 92px;
     padding-bottom: 165px;
-    background-image: linear-gradient(to bottom,
+    background-image: url(../images/contacts-bgd.png), linear-gradient(to bottom,
         var(--main-white) 20%, var(--secondary-bg-color) 20%);
+        @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/contacts-bgd-2x.png),
+          linear-gradient(to bottom,
+            var(--main-white) 20%, var(--secondary-bg-color) 20%);;
+        }
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        background-position-y: 35%;
   }
 
   &-list {
