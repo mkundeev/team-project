@@ -11,6 +11,14 @@
   }
   .container {
     text-align: center;
+    width: 100%;
+    max-width: 480px;
+    @include tablet {
+      min-width: 740px;
+    }
+    @include desktop {
+      min-width: 1090px;
+    }
   }
   &__text {
     font-family: 'Titan One';
@@ -43,10 +51,10 @@
   }
   &-list {
     margin-bottom: -30px;
-    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     @include tablet {
+      width: fit-content;
       display: flex;
       margin-bottom: 0;
       margin-right: -20px;
@@ -105,10 +113,8 @@
       height: 252px;
       background-image: url(../images/ice_cream-mob-1x.png);
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        
-          background-image: url(../images/ice_cream-mob-2x.png);
-          background-size: cover;
-        
+        background-image: url(../images/ice_cream-mob-2x.png);
+        background-size: cover;
       }
     }
     .coffee &::before {
@@ -117,10 +123,8 @@
       height: 252px;
       background-image: url(../images/ice_coffee-mob-1x.png);
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        
-          background-image: url(../images/ice_coffee-mob-2x.png);
-          background-size: cover;
-        
+        background-image: url(../images/ice_coffee-mob-2x.png);
+        background-size: cover;
       }
     }
 
@@ -130,10 +134,8 @@
       height: 252px;
       background-image: url(../images/milkshakes-mob-1x.png);
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        
-          background-image: url(../images/milkshakes-mob-2x.png);
-          background-size: cover;
-        
+        background-image: url(../images/milkshakes-mob-2x.png);
+        background-size: cover;
       }
     }
     @include tablet {
@@ -143,9 +145,8 @@
         height: 226px;
         background-image: url(../images/ice_cream-tab-1x.png);
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-          
-            background-image: url(../images/ice_cream-tab-2x.png);
-            background-size: cover;
+          background-image: url(../images/ice_cream-tab-2x.png);
+          background-size: cover;
         }
       }
 
@@ -155,9 +156,8 @@
         height: 226px;
         background-image: url(../images/ice_coffee-tab-1x.png);
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-         
-            background-image: url(../images/ice_coffee-tab-2x.png);
-            background-size: cover;
+          background-image: url(../images/ice_coffee-tab-2x.png);
+          background-size: cover;
         }
       }
 
@@ -167,9 +167,8 @@
         height: 226px;
         background-image: url(../images/milkshakes-tab-1x.png);
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-          
-            background-image: url(../images/milkshakes-tab-2x.png);
-            background-size: cover;
+          background-image: url(../images/milkshakes-tab-2x.png);
+          background-size: cover;
         }
       }
     }
@@ -181,9 +180,8 @@
         height: 335px;
         background-image: url(../images/ice_cream-1x.png);
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-          
-            background-image: url(../images/ice_cream-2x.png);
-            background-size: cover;
+          background-image: url(../images/ice_cream-2x.png);
+          background-size: cover;
         }
       }
       .coffee &::before {
@@ -192,9 +190,8 @@
         height: 335px;
         background-image: url(../images/ice_coffee-1x.png);
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-          
-            background-image: url(../images/ice_coffee-2x.png);
-            background-size: cover;
+          background-image: url(../images/ice_coffee-2x.png);
+          background-size: cover;
         }
       }
 
@@ -204,9 +201,8 @@
         height: 335px;
         background-image: url(../images/milkshakes-1x.png);
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-          
-            background-image: url(../images/milkshakes-2x.png);
-            background-size: cover;
+          background-image: url(../images/milkshakes-2x.png);
+          background-size: cover;
         }
       }
     }
@@ -215,13 +211,15 @@
     .coffee &::before,
     .milkshakes &::before {
       position: absolute;
-      left: 16px;
+      left: 50%;
+      transform: translate(-50%);
       bottom: 346px;
-      animation: flipInY;
-      animation-duration: 3s;
       @include tablet {
-        left: 0;
         bottom: 363px;
+        left: 0;
+        transform: translate(0);
+        animation: flipInY;
+        animation-duration: 3s;
       }
       @include desktop {
         bottom: 400px;
@@ -233,16 +231,15 @@
     .milkshakes &::after {
       position: absolute;
       content: '...';
-      left: 127px;
+      left: 50%;
+      transform: translate(-50%);
       bottom: 260px;
       font-size: 25px;
       @include tablet {
-        left: 97px;
         bottom: 270px;
         font-size: 27px;
       }
       @include desktop {
-        left: 151px;
         bottom: 285px;
       }
     }
@@ -255,9 +252,10 @@
   transform: rotateY(0);
   transition-duration: 300ms;
   display: block;
-  width: 200px;
+  width: 100%;
   height: 124px;
   @include tablet {
+    display: block;
     @include font(null, null, 1.76, null);
     color: var(--main-white);
     width: 198px;
@@ -276,24 +274,22 @@
 
 .products-list__checkbox-icon {
   position: absolute;
-  left: 120px;
+  left: 50%;
   bottom: 41px;
   border-radius: 50px;
   width: 40px;
   height: 40px;
   background-color: #ffffff;
   margin-top: 30px;
-  transform: rotateY(0);
+  transform: translate(-50%) rotateY(0);
   transition-duration: 300ms;
   cursor: pointer;
   @include tablet {
-    left: 90px;
     bottom: 40px;
     margin-top: 40px;
   }
   @include desktop {
     margin-top: 62px;
-    left: 144px;
     bottom: 50px;
   }
 }
@@ -311,7 +307,7 @@
 
 .produckts-list__input:checked ~ .products-list__checkbox-icon {
   background-color: #ecebeb;
-  transform: rotateY(360deg) scale(1.3);
+  transform: translate(-50%) rotateY(360deg) scale(1.3);
   transition-duration: 300ms;
 }
 
