@@ -17,6 +17,7 @@ z-index: 3;
     }
 }
 .logo{
+    display: block;
     @include flex(flex, center, flex-start);
     &-icon {
         fill: var(--primery-pink-color);
