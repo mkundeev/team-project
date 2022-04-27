@@ -31,31 +31,39 @@
     padding-bottom: 165px;
     background-image: linear-gradient(to bottom,
         var(--main-white) 20%, var(--secondary-bg-color) 20%);
+        
+  }
+  & .container {
+    width: fit-content;
   }
 
   &-list {
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: -10px;
-    margin-right: -10px;
+    
     margin-bottom: -20px;
     margin-top: 0;
 
     @include tablet {
       margin-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-right: -20px;
+    }
+
+    @include desktop {
+      margin-right: -30px;
     }
 
   }
 
   &-list__item {
-    flex-basis: calc(100% / 3 - 20px);
-    min-width: 220px;
+    
+    max-width: 220px;
     min-height: 427px;
 
-    margin-right: 10px;
-    margin-left: 10px;
+    // margin-right: 10px;
+    // margin-left: 10px;
     margin-bottom: 20px;
 
     padding: 43px 20px;
@@ -66,6 +74,8 @@
     border-radius: 24px;
 
     @include tablet {
+      flex-basis: calc(100% / 3 - 20px);
+      margin-right: 20px;
       margin-bottom: 0;
       min-height: 544px;
       padding: 50px 31px;
@@ -73,8 +83,11 @@
     }
 
     @include desktop {
+      flex-basis: calc(100% / 3 - 30px);
+      min-width: 330px;
       min-height: 572px;
-      padding: 51px 44px;
+      margin-right: 30px;
+      padding: 51px 43px 62px 43px;
       @include font(16px, 500, 1.86, 0.04em);
     }
   }
@@ -90,11 +103,16 @@
 
     &.green {
       background-color: var(--green-color);
+      
+      @include tablet {
+        padding: 0 16px;
+      }
     }
 
     @include tablet {
       @include font(16px, 500, 1.86, 0.04em);
       margin-bottom: 30px;
+      padding: 0 15px;
     }
 
     @include desktop {
