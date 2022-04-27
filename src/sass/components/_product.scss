@@ -52,7 +52,7 @@
       margin-right: -20px;
     }
     @include desktop {
-      margin-right: -29px;
+      margin-right: -23px;
     }
   }
 
@@ -75,8 +75,8 @@
       min-width: 329px;
       height: 525px;
       padding: 163px 44px 50px 44px;
-      width: calc(100% / 3 - 29px);
-      margin-right: 29px;
+      width: calc(100% / 3 - 23px);
+      margin-right: 23px;
     }
 
     &.cream {
