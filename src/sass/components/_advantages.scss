@@ -114,7 +114,7 @@
   }
   @include desktop {
     margin-bottom: 15px;
-    @include font(50px, 400, 1.14, 0.04em);
+    @include font(58px, 400, 1.14, 0.04em);
   }
 }
 
@@ -130,6 +130,6 @@
     @include font(14px, 700, 1.74, 0.04em);
   }
   @include desktop {
-    @include font(16px, 400, 1.76, 0.02em);
+    @include font(16px, 700, 1.76, 0.02em);
   }
 }
