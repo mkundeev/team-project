@@ -74,19 +74,14 @@
 
   &-list__item {
     
-    max-width: 220px;
+    max-width: 480px;
     min-height: 427px;
 
-
-    // margin-right: 10px;
-    // margin-left: 10px;
     @media screen and (max-width:767px){
     &:not(:last-child){
       margin-bottom: 20px;}
     }
-    
-
-
+  
     padding: 43px 18px;
 
     background-color: var(--main-white);
