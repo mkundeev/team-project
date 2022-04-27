@@ -88,7 +88,7 @@
   background-image: repeating-linear-gradient(to bottom, $customer-bg-color, $customer-bg-color 11.5%, #E1E1E1 12.3%);
 
   @include tablet {
-    background-image: repeating-linear-gradient(to bottom, $customer-bg-color, $customer-bg-color 31%, #E1E1E1 32%);
+    background-image: repeating-linear-gradient(to bottom, $customer-bg-color, $customer-bg-color 30%, #E1E1E1 32%);
   }
 
   @include desktop {
