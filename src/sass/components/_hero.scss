@@ -81,7 +81,7 @@
     .hero-circle{
         
         position: absolute;
-        left: 36px;
+        left: 10%;
         bottom: -85px;
 
         border-radius: 50%;
@@ -108,7 +108,7 @@
     .hero-icecream{
         position: absolute;
         bottom: -160px;
-        left: 117px;
+        left: 30%;
         z-index: 1;
 
         @include tablet {
