@@ -50,6 +50,9 @@ z-index: 3;
     @include desktop {
         margin-left: 110px;
     }
+    .menu-arrow-icon {
+        margin-left: 12px;
+    }
 }
 .btn-menu{
     @include desktop{

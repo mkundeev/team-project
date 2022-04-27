@@ -139,6 +139,8 @@
     .milk-check-box__text{
         display: inline-block;
         width: 114px;
+        transform: rotateX(0);
+        transition-duration: 300ms;
         @include font(8px, 400, 1.5, null);
         color: var(--main-white);
         margin-bottom: 7px;
@@ -147,8 +149,7 @@
         @include font(14px, 400, 1.4, null);
         color: var(--main-white);
         margin-bottom: 20px;
-        transform: rotateX(0);
-        transition-duration: 300ms;
+        
         }
     }
     .white-circle{
