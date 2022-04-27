@@ -17,7 +17,7 @@
 
   background-color: var(--secondary-bg-color);
   background-image: linear-gradient(to bottom,
-      var(--main-white) 6.5%, var(--secondary-bg-color) 6.5%);
+      var(--main-white) 8%, var(--secondary-bg-color) 8%);
 
   @include tablet {
     padding-top: 79px;
@@ -31,19 +31,23 @@
     padding-bottom: 165px;
     background-image: url(../images/contacts-bgd.png), linear-gradient(to bottom,
         var(--main-white) 20%, var(--secondary-bg-color) 20%);   
-  }
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/contacts-bgd-2x.png),
+        linear-gradient(to bottom,
+          var(--main-white) 20%, var(--secondary-bg-color) 20%);
+      ;
+    }
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-position-y: 35%;
+  
+      }
  
-        @media screen and (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-          background-image: url(../images/contacts-bgd-2x.png),
-          linear-gradient(to bottom,
-            var(--main-white) 20%, var(--secondary-bg-color) 20%);;
-        }
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        background-position-y: 35%;
+        
    & .container {
     width: fit-content;
   }
@@ -51,7 +55,7 @@
   &-list {
     padding: 0;
     
-    margin-bottom: -20px;
+    margin-bottom: 54px;
     margin-top: 0;
 
     @include tablet {
@@ -75,7 +79,11 @@
 
     // margin-right: 10px;
     // margin-left: 10px;
-    margin-bottom: 20px;
+    @media screen and (max-width:767px){
+    &:not(:last-child){
+      margin-bottom: 20px;}
+    }
+    
 
     padding: 43px 20px;
 
