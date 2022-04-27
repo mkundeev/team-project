@@ -54,6 +54,11 @@
     width: 209px;
     margin-bottom: 19px;
     margin-left: 21px;
+    @include tablet{
+        width: 186px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .nav-list{
