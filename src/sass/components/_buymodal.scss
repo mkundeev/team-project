@@ -28,18 +28,7 @@
 
     
 
-    .btn {
-        min-width: 140px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5px;
-        
-       
-        stroke: var(--main-white);
-        .menu-arrow-icon{
-            margin-left: 40px;
-        }
-    }
+   
     .order-icecream{
         border: none;
         height: 120px;
@@ -87,6 +76,67 @@
         border-radius: 10px;
         border-color: var(--secondary-pink-color);
         text-align: center;
+    }
+    
+}
+.modal-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .btn {
+        height: 24px;
+        margin-top: 10px;
+        @include font(11px, 400, 1.25, null);
+        min-width: 80px;
+        stroke: var(--main-white);
+        @include tablet {
+        min-width: 140px;
+        height: 40px;
+        @include font(14px, 400, 1.28, null);
+        
+        }
+
+        .menu-arrow-icon {
+            margin-left: 10px;
+            height: 8px;
+            @include tablet {
+                margin-left: 40px;
+                height: 10px;
+            }
+
+        }
+
+    }
+}
+.quantity{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    @include font(11px, 500, 0.91, null);
+    
+    @include tablet {
+        @include font(14px, 500, 0.91, null);
+    }
+    .quantity-item{
+        width: calc(100% / 2 - 20px);
+        display: flex;
+        align-items: center;
+    }
+    .quantity-item + .quantity-item{
+        margin-left: 20px;
+    }
+    .box{
+        display: inline-block;
+        border-radius: 10px;
+        border: 2px solid var(--secondary-pink-color);
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+        margin-left: 5px;
+        height: fit-content;
+        line-height: 1.1;
+
     }
 
 }
