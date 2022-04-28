@@ -47,6 +47,15 @@
   text-transform: uppercase;
 
   color: var(--secondary-pink-color);
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: translate(0px, 0%);
+    opacity: 1;
+  }
   @include tablet {
     margin-bottom: 16px;
     @include font(26px, 400, 1.15, null);
@@ -64,6 +73,15 @@
   text-transform: uppercase;
 
   color: var(--primery-pink-color);
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: translate(0px, 0%);
+    opacity: 1;
+  }
   @media screen and (max-width: 767px) {
     width: 200px;
     margin-left: auto;
@@ -78,6 +96,18 @@
     @include font(58px, 400, 1.14, 0.06em);
   }
 }
+
+._anim-show {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+
+._anim-show._active,
+._active ._anim-show {
+  opacity: 1;
+  transform: translate(0px, 0px);
+} 
 
 .about__content {
   margin-left: auto;
