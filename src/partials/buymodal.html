@@ -18,7 +18,7 @@
                         <p class="item-price">$4.25</p>
                         <div class="order-quntity-wrap">
                             <label class="order-label" for="qty-icecream">Quantity:</label>
-                            <input class="order__input" type="number" name="number" min="0" id="qty-icecream">
+                            <input class="order__input ice" type="number" name="number" min="0" id="qty-icecream">
                         </div>
                     </div>
                 </li>
@@ -32,7 +32,7 @@
                         <p class="item-price">$4.25</p>
                         <div class="order-quntity-wrap">
                             <label class="order-label" for="qty-coffee">Quantity:</label>
-                            <input class="order__input" type="number" name="number" min="0" id="qty-coffee">
+                            <input class="order__input coffee" type="number" name="number" min="0" id="qty-coffee">
                         </div>
                     </div>
                 </li>
@@ -44,16 +44,25 @@
                         <p class="item-price">$4.25</p>
                         <div class="order-quntity-wrap">
                             <label class="order-label" for="qty-milkskake">Quantity:</label>
-                            <input class="order__input" type="number" name="number" min="0" id="qty-milkskake">
+                            <input class="order__input shake" type="number" name="number" min="0" id="qty-milkskake">
                         </div>
+
                     </div>
                 </li>
             </ul>
-            <button type="button" class="btn btn--pink" data-fran-open2>Next
-                <svg class="menu-arrow-icon" width="14" height="10">
-                    <use href="./images/icons.svg#icon-arrow-1"></use>
-                </svg>
-            </button>
+            <ul class="quantity">
+                <li class="quantity-item"> <span>Amount: </span><p class="box amount"></p></li>
+                <li class="quantity-item"> <span>Total:</span><p class="box total"></p></li>
+            </ul>
+            <div class="modal-buttons">
+                <button type="button" class="btn btn--pink btn--calc">Calculate
+                </button>
+                <button type="button" class="btn btn--pink" data-fran-open2>Next
+                    <svg class="menu-arrow-icon" width="14" height="10">
+                        <use href="./images/icons.svg#icon-arrow-1"></use>
+                    </svg>
+                </button>
+            </div>
         </form>
     </div>
 </div>
