@@ -211,6 +211,7 @@
   }
 
   &-list__link {
+    display: block;
     @include font(12px, 500, 1.8, null);
     color: var(--main-text-color);
 
