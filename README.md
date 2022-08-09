@@ -19,5 +19,5 @@ HTML5, SASS, JS
 - Nikita Kovpak
 
 ## Presentation
-![Hero desktop](https://api.monosnap.com/file/download?id=1SDtqnFwE4eoJPlcf9D3tMmMw9T7C4)
-![Menu tablet](https://api.monosnap.com/file/download?id=f40jbCkChDrGpZoHGjQApYKEB5m7Cv)
+![Hero desktop](./src/images/IceCream.jpg)
+![Menu tablet](./src/images/IceCreamMenuTablet.jpg)
