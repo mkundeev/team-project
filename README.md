@@ -1,6 +1,6 @@
 # IceCream
 
-IceCreama is adaptive landing page for selling icecream and franchise.[link](https://mkundeev.github.io/team-project/)
+IceCreama is adaptive landing page for selling icecream and franchise. => [link](https://mkundeev.github.io/team-project/)
 
 ## Used technologies
 
