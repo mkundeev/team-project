@@ -19,5 +19,5 @@ HTML5, SASS, JS
 - Nikita Kovpak
 
 ## Presentation
-![Hero desktop](./src/images/IceCream.jpg)
-![Menu tablet](./src/images/IceCreamMenuTablet.jpg)
+![Hero desktop](./src/images/IceCream.JPG)
+![Menu tablet](./src/images/IceCreamMenuTablet.JPG)
